@@ -22,3 +22,13 @@
 * View the permissions for all files and directories within a directory
 * Modify permissions for a file by user
 * Describe the effect of changing permissions on a directory
+
+## linux_wrangling_text_files.sh
+* Displaying and exploring file contents
+* Extracting and displaying first or last N lines of text
+* Displaying counts of lines, words, and characters in text
+* Sorting lines (rows) of text
+* Dropping consecutively duplicated lines of text
+* Extracting lines of text containing a pattern match
+* Extracting fields from lines of text
+* Merging text files as aligned columns of text
