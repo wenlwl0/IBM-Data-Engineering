@@ -32,7 +32,5 @@
    32  cp /tmp/user-info.txt user-info.txt #copy into current working directory
    33  cp /etc/passwd users.txt # copy the contents of an existing file into a new one
    34  ls
-   35  history 50 > linux_lab_commands.sh 
-   36  history 50 > linux_navigating_and_managing_files_and_directories.sh
    37  cd ~/IBM-Data-Engineering/06-Linux-Labs/
    38  history 50 > linux_navigating_and_managing_files_and_directories.sh
