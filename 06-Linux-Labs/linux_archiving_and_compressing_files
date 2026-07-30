@@ -13,12 +13,4 @@
    13  #The unzip command allows you to extract files.
    14  unzip -o bin.zip
    15  #extracts all the files in the archive bin.zip. -o option to force overwrite in case you run the command more than once
-   16  history 50 > linux_networking_commands
    17  history 50 >linux_archiving_and_compressing_files
-   18  cd 06-linux-labs
-   19  git clone https://github.com/wenlwl0/IBM-Data-Engineering.git
-   20  cd IBM-Data-Engineering
-   21  cd 06-Linux-Labs
-   22  git pull origin main --rebase 
-   23  git status
-   24  history 50 > linux_archiving_and_compressing_files
