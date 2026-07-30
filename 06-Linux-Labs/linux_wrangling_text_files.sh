@@ -30,21 +30,3 @@
    31  #paste command to view the two files merged together, line-by-line, as columns delimited by a Tab character
    32  paste -d "," zoo.txt zoo_ages.txt #specify a comma instead of default tab delimiter
    33  history 50 > linux_wrangling_text_files.sh
-   34  cd ~/IBM-Data-Engineering/06-Linux-Labs/ 
-   35  cd ~/IBM-Data-Engineering 
-   36  git remote add origin https://github.com/wenlwl0/IBM-Data-Engineering.git 
-   37  git clone https://github.com/wenlwl0/IBM-Data-Engineering.git 
-   38  git init
-   39  git status
-   40  git branch
-   41  git config --global user.email "leewenli@gmail.com"
-   42  git config --global user.name "wenlwl0"  
-   43  git status
-   44  cd ~/IBM-Data-Engineering/06-Linux-Labs/ 
-   45  cd IBM-Data-Engineering
-   46  git remote add origin https://github.com/wenlwl0/IBM-Data-Engineering.git 
-   47  git clone https://github.com/wenlwl0/IBM-Data-Engineering.git 
-   48  cd IBM-Data-Engineering
-   49  cd ~/IBM-Data-Engineering/06-Linux-Labs/ 
-   50  cd 06-Linux-Labs
-   51  history 50 > linux_wrangling_text_files.sh
