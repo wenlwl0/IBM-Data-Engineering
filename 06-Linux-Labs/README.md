@@ -32,3 +32,8 @@
 * Extracting lines of text containing a pattern match
 * Extracting fields from lines of text
 * Merging text files as aligned columns of text
+
+## linux_networking_commands
+* View your network configuration using the hostname and ip commands
+* Test a network connection using the ping command
+* Transfer data using the curl and wget commands
