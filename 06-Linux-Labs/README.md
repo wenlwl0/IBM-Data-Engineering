@@ -42,3 +42,14 @@
 * Create archives for sets of files and folders
 * Compress and decompress files
 * Extract files and folders from an existing archive
+
+## basic_bash_scripting
+* Create and execute a simple Bash shell script
+* Implement the shebang directive in a Bash shell script
+
+## advanced_bash_scripting
+* Run sets of commands using conditional statements
+* Create true/false comparisons with logical operators
+* Use arithmetic operators to perform basic mathematical calculations
+* Use list-like arrays to store and access data
+* Execute repetitive tasks with for loops
