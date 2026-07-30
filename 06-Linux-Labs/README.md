@@ -37,3 +37,8 @@
 * View your network configuration using the hostname and ip commands
 * Test a network connection using the ping command
 * Transfer data using the curl and wget commands
+
+## archiving_and_compressing_files
+* Create archives for sets of files and folders
+* Compress and decompress files
+* Extract files and folders from an existing archive
