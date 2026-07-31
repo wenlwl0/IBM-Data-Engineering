@@ -54,7 +54,7 @@
 * Use list-like arrays to store and access data
 * Execute repetitive tasks with for loops
 
-#Project: Historical Weather Forecast Comparison to Actuals
+# Project: Historical Weather Forecast Comparison to Actuals
 * Initialize your log file
 * Write a Bash script to download, extract, and load raw data into a report
 * Add some basic analytics to your report
