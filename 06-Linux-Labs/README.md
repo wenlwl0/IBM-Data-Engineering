@@ -1,5 +1,7 @@
 # 06 - Linux and Shell Scripting Labs
 
+# Linux-Commands
+
 ## linux_informational_commands.sh
 * System and user information
 * User and group identity info
@@ -43,13 +45,18 @@
 * Compress and decompress files
 * Extract files and folders from an existing archive
 
-## basic_bash_scripting
+# Shell-Scripting
 * Create and execute a simple Bash shell script
 * Implement the shebang directive in a Bash shell script
-
-## advanced_bash_scripting
 * Run sets of commands using conditional statements
 * Create true/false comparisons with logical operators
 * Use arithmetic operators to perform basic mathematical calculations
 * Use list-like arrays to store and access data
 * Execute repetitive tasks with for loops
+
+# Project: Historical Weather Forecast Comparison to Actuals
+* Initialize your log file
+* Write a Bash script to download, extract, and load raw data into a report
+* Add some basic analytics to your report
+* Schedule your report to update daily
+* Measure and report on historical forecasting accuracy
