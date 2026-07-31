@@ -1,0 +1,8 @@
+    1  ls -l greet.sh #check permissions
+    3  bash greet.sh
+    4  which bash
+    6  chmod +x greet.sh #add the execute permission for the user on greet.sh
+    8  chmod u+x greet.sh #change permissions for greet.sh to make the file executable for the user
+    9  ls -l greet.sh
+   10  ./greet.sh
+   12  history 50 > basic_bash_scripting
