@@ -1,6 +1,6 @@
 # 06 - Linux and Shell Scripting Labs
 
-### Linux-Commands
+## Linux-Commands
 
 ## linux_informational_commands.sh
 * System and user information
@@ -45,7 +45,7 @@
 * Compress and decompress files
 * Extract files and folders from an existing archive
 
-### Shell-Scripting
+## Shell-Scripting
 * Create and execute a simple Bash shell script
 * Implement the shebang directive in a Bash shell script
 * Run sets of commands using conditional statements
