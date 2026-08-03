@@ -1,1 +1,3 @@
--rwxr-xr-x 1 root root 1454 Aug  3 01:27 /usr/local/bin/backup.sh
+theia@theia-wl2533:/home/project$ sudo cp backup.sh /usr/local/bin/
+theia@theia-wl2533:/home/project$ ls -l /usr/local/bin/backup.sh
+-rwxr-xr-x 1 root root 1454 Aug  3 02:16 /usr/local/bin/backup.sh
