@@ -14,19 +14,7 @@
    14  mkdir test2
    15  cd ../
    16  chmod u-x test # Remove user execute permissions on test
-   17  cd test
    18  cd test #confirm permission denied
-   19  ls -l
    20  ls -l #still can read it
    21  mkdir test/test3 #throws an error, cannot create a new directory within tests as permission is removed
    22  history 50 > linux_access_control_commands.sh
-   23  cd ~/IBM-Data-Engineering/06-Linux-Labs/ 
-   24  git add .
-   25  git commit
-   26  git status
-   27  git clone https://github.com/wenlwl0/IBM-Data-Engineering.git
-   28  git add .
-   29  rm -rf IBM-Data-Engineering
-   30  git rm --cached IBM-Data-Engineering 2>/dev/null || true
-   31  pwd
-   32  history 50 > linux_access_control_commands.sh
