@@ -60,3 +60,6 @@
 * Add some basic analytics to your report
 * Schedule your report to update daily
 * Measure and report on historical forecasting accuracy
+
+# Project: Final Project
+* Tasked with creating a script called backup.sh which runs every day and automatically backs up any encrypted password files that have been updated in the past 24 hours
