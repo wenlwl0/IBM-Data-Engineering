@@ -1,0 +1,227 @@
+postgres=# \i flights_RUSSIA_small.sql
+SET
+SET
+SET
+SET
+SET
+SET
+SET
+SET
+CREATE DATABASE
+SET
+SET
+SET
+SET
+SET
+SET
+SET
+SET
+CREATE SCHEMA
+COMMENT
+CREATE EXTENSION
+COMMENT
+SET
+CREATE FUNCTION
+CREATE FUNCTION
+COMMENT
+SET
+SET
+CREATE TABLE
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE VIEW
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE TABLE
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE VIEW
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE TABLE
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE TABLE
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE TABLE
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE SEQUENCE
+ALTER SEQUENCE
+CREATE VIEW
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE VIEW
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE TABLE
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE TABLE
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE TABLE
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+ALTER TABLE
+COPY 9
+COPY 104
+COPY 579686
+COPY 262788
+COPY 33121
+ setval 
+--------
+  33121
+(1 row)
+
+COPY 1339
+COPY 1045726
+COPY 366733
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER DATABASE
+ALTER DATABASE
+demo=# ALTER DATABASE
+\dt
+               List of relations
+  Schema  |      Name       | Type  |  Owner   
+----------+-----------------+-------+----------
+ bookings | aircrafts_data  | table | postgres
+ bookings | airports_data   | table | postgres
+ bookings | boarding_passes | table | postgres
+ bookings | bookings        | table | postgres
+ bookings | flights         | table | postgres
+ bookings | seats           | table | postgres
+ bookings | ticket_flights  | table | postgres
+ bookings | tickets         | table | postgres
+(8 rows)
+
+demo=# SHOW wal_level;
+ wal_level 
+-----------
+ replica
+(1 row)
+
+demo=# ALTER SYSTEM SET wal_level = 'logical';
+ALTER SYSTEM
+demo=# \connect demo
+psql (15.2 (Ubuntu 15.2-1.pgdg18.04+1), server 13.2)
+You are now connected to database "demo" as user "postgres".
+demo=# SELECT * FROM pg_tables WHERE schemaname = 'bookings';
+ALTER SYSTEM
+ schemaname |    tablename    | tableowner | tablespace | hasindexes | hasrules | hastriggers | rowsecurity 
+------------+-----------------+------------+------------+------------+----------+-------------+-------------
+ bookings   | ticket_flights  | postgres   |            | t          | f        | t           | f
+ bookings   | boarding_passes | postgres   |            | t          | f        | t           | f
+ bookings   | aircrafts_data  | postgres   |            | t          | f        | t           | f
+ bookings   | flights         | postgres   |            | t          | f        | t           | f
+ bookings   | airports_data   | postgres   |            | t          | f        | t           | f
+ bookings   | seats           | postgres   |            | t          | f        | t           | f
+ bookings   | tickets         | postgres   |            | t          | f        | t           | f
+ bookings   | bookings        | postgres   |            | t          | f        | t           | f
+(8 rows)
+
+demo=# ALTER TABLE boarding_passes ENABLE ROW LEVEL SECURITY;
+ALTER TABLE
+demo=# SELECT name, setting, short_desc FROM pg_settings WHERE name = 'wal_level';
+   name    | setting |                    short_desc                    
+-----------+---------+--------------------------------------------------
+ wal_level | replica | Set the level of information written to the WAL.
+(1 row)
+
+demo=# ALTER TABLE aircrafts_data RENAME TO aircraft_fleet;
+ALTER TABLE
+demo=# SELECT tablename FROM pg_tables WHERE schemaname = 'bookings';
+    tablename    
+-----------------
+ aircraft_fleet
+ ticket_flights
+ flights
+ airports_data
+ seats
+ tickets
+ bookings
+ boarding_passes
+(8 rows)
+
