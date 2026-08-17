@@ -1,0 +1,210 @@
+postgres=# \i flights_RUSSIA_small.sql
+SET
+SET
+SET
+SET
+SET
+SET
+SET
+SET
+psql:flights_RUSSIA_small.sql:17: ERROR:  database "demo" does not exist
+CREATE DATABASE
+psql (14.19 (Ubuntu 14.19-0ubuntu0.22.04.1), server 13.2)
+You are now connected to database "demo" as user "postgres".
+SET
+SET
+SET
+SET
+SET
+SET
+SET
+SET
+CREATE SCHEMA
+COMMENT
+CREATE EXTENSION
+COMMENT
+SET
+CREATE FUNCTION
+CREATE FUNCTION
+COMMENT
+SET
+SET
+CREATE TABLE
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE VIEW
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE TABLE
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE VIEW
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE TABLE
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE TABLE
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE TABLE
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE SEQUENCE
+ALTER SEQUENCE
+CREATE VIEW
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE VIEW
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE TABLE
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE TABLE
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE TABLE
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+ALTER TABLE
+COPY 9
+COPY 104
+COPY 579686
+COPY 262788
+COPY 33121
+ setval 
+--------
+  33121
+(1 row)
+
+COPY 1339
+COPY 1045726
+COPY 366733
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER DATABASE
+ALTER DATABASE
+
+demo=# \dt
+               List of relations
+  Schema  |      Name       | Type  |  Owner   
+----------+-----------------+-------+----------
+ bookings | aircrafts_data  | table | postgres
+ bookings | airports_data   | table | postgres
+ bookings | boarding_passes | table | postgres
+ bookings | bookings        | table | postgres
+ bookings | flights         | table | postgres
+ bookings | seats           | table | postgres
+ bookings | ticket_flights  | table | postgres
+ bookings | tickets         | table | postgres
+(8 rows)
+
+demo=# CREATE ROLE read_only; #Create a read_only role and grant it privileges
+CREATE ROLE
+demo=# GRANT CONNECT ON DATABASE demo TO read_only;
+GRANT
+demo=# GRANT USAGE ON SCHEMA bookings TO read_only;
+GRANT
+demo=# GRANT SELECT ON ALL TABLES IN SCHEMA bookings TO read_only;
+GRANT
+
+
+demo=# CREATE ROLE read_write; #Create a read_write role and grant it privileges
+CREATE ROLE
+demo=# GRANT CONNECT ON DATABASE demo TO read_write;
+GRANT
+demo=# GRANT USAGE ON SCHEMA bookings TO read_write;
+GRANT
+demo=# GRANT SELECT, INSERT, DELETE, UPDATE ON ALL TABLES IN SCHEMA bookings TO read_write;
+GRANT
+
+demo=# CREATE USER user_a WITH PASSWORD 'user_a_password'; #Add a New User and Assign them a Relevant Role
+demo=# GRANT read_only TO user_a;
+demo=# \du
+
+demo=# REVOKE SELECT ON aircrafts_data FROM user_a; #Revoke and deny access
+REVOKE
+demo=# REVOKE read_only FROM user_a;
+REVOKE ROLE
+demo=# \du

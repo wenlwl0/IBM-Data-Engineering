@@ -24,3 +24,9 @@
 *Restore a full database from a backup
 *Update a database and perform a full backup
 *Drop a database and then restore it
+
+**User Management and Access Control**
+
+*Create roles in a database and grant them select permissions
+*Create new users in the database and assign them the appropriate role
+*Revoke and deny access to the database from a user
