@@ -1,0 +1,256 @@
+postgres=# \i flights_RUSSIA_small.sql
+SET
+SET
+SET
+SET
+SET
+SET
+SET
+SET
+DROP DATABASE
+CREATE DATABASE
+psql (14.19 (Ubuntu 14.19-0ubuntu0.22.04.1), server 13.2)
+You are now connected to database "demo" as user "postgres".
+SET
+SET
+SET
+SET
+SET
+SET
+SET
+SET
+CREATE SCHEMA
+COMMENT
+CREATE EXTENSION
+COMMENT
+SET
+CREATE FUNCTION
+CREATE FUNCTION
+COMMENT
+SET
+SET
+CREATE TABLE
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE VIEW
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE TABLE
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE VIEW
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE TABLE
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE TABLE
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE TABLE
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE SEQUENCE
+ALTER SEQUENCE
+CREATE VIEW
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE VIEW
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE TABLE
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE TABLE
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+CREATE TABLE
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+COMMENT
+ALTER TABLE
+COPY 9
+COPY 104
+COPY 579686
+COPY 262788
+COPY 33121
+ setval 
+--------
+  33121
+(1 row)
+
+COPY 1339
+COPY 1045726
+COPY 366733
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER DATABASE
+ALTER DATABASE
+demo=# \dt
+               List of relations
+  Schema  |      Name       | Type  |  Owner   
+----------+-----------------+-------+----------
+ bookings | aircrafts_data  | table | postgres
+ bookings | airports_data   | table | postgres
+ bookings | boarding_passes | table | postgres
+ bookings | bookings        | table | postgres
+ bookings | flights         | table | postgres
+ bookings | seats           | table | postgres
+ bookings | ticket_flights  | table | postgres
+ bookings | tickets         | table | postgres
+(8 rows)
+
+demo=# SELECT * FROM aircrafts_data;
+ aircraft_code |             model             | range 
+---------------+-------------------------------+-------
+ 773           | {"en": "Boeing 777-300"}      | 11100
+ 763           | {"en": "Boeing 767-300"}      |  7900
+ SU9           | {"en": "Sukhoi Superjet-100"} |  3000
+ 320           | {"en": "Airbus A320-200"}     |  5700
+ 321           | {"en": "Airbus A321-200"}     |  5600
+ 319           | {"en": "Airbus A319-100"}     |  6700
+ 733           | {"en": "Boeing 737-300"}      |  4200
+ CN1           | {"en": "Cessna 208 Caravan"}  |  1200
+ CR2           | {"en": "Bombardier CRJ-200"}  |  2700
+(9 rows)
+demo=# INSERT INTO aircrafts_data(aircraft_code, model, range) VALUES (380, '{"en": "Airbus A380-800"}', 15700);
+INSERT 0 1us A380-800"}', 15700);(aircraft_code, model, range) VALUES (380, '{"e
+demo=# SELECT * FROM aircrafts_data;
+ aircraft_code |             model             | range 
+---------------+-------------------------------+-------
+ 773           | {"en": "Boeing 777-300"}      | 11100
+ 763           | {"en": "Boeing 767-300"}      |  7900
+ SU9           | {"en": "Sukhoi Superjet-100"} |  3000
+ 320           | {"en": "Airbus A320-200"}     |  5700
+ 321           | {"en": "Airbus A321-200"}     |  5600
+ 319           | {"en": "Airbus A319-100"}     |  6700
+ 733           | {"en": "Boeing 737-300"}      |  4200
+ CN1           | {"en": "Cessna 208 Caravan"}  |  1200
+ CR2           | {"en": "Bombardier CRJ-200"}  |  2700
+ 380           | {"en": "Airbus A380-800"}     | 15700
+(10 rows)
+
+demo=# \q
+
+postgres=# \connect restored_demo
+psql (14.19 (Ubuntu 14.19-0ubuntu0.22.04.1), server 13.2)
+You are now connected to database "restored_demo" as user "postgres".
+restored_demo=# SELECT pg_catalog.set_config('search_path', 'bookings', false);
+ set_config 
+------------
+ bookings
+(1 row)
+
+restored_demo=# \dt
+               List of relations
+  Schema  |      Name       | Type  |  Owner   
+----------+-----------------+-------+----------
+ bookings | aircrafts_data  | table | postgres
+ bookings | airports_data   | table | postgres
+ bookings | boarding_passes | table | postgres
+ bookings | bookings        | table | postgres
+ bookings | flights         | table | postgres
+ bookings | seats           | table | postgres
+ bookings | ticket_flights  | table | postgres
+ bookings | tickets         | table | postgres
+(8 rows)
+
+restored_demo=# SELECT * FROM aircrafts_data;
+ aircraft_code |             model             | range 
+---------------+-------------------------------+-------
+ 773           | {"en": "Boeing 777-300"}      | 11100
+ 763           | {"en": "Boeing 767-300"}      |  7900
+ SU9           | {"en": "Sukhoi Superjet-100"} |  3000
+ 320           | {"en": "Airbus A320-200"}     |  5700
+ 321           | {"en": "Airbus A321-200"}     |  5600
+ 319           | {"en": "Airbus A319-100"}     |  6700
+ 733           | {"en": "Boeing 737-300"}      |  4200
+ CN1           | {"en": "Cessna 208 Caravan"}  |  1200
+ CR2           | {"en": "Bombardier CRJ-200"}  |  2700
+ 380           | {"en": "Airbus A380-800"}     | 15700
+(10 rows)
+
+restored_demo=# SELECT * FROM tickets WHERE book_ref = '0002D8';
+restored_demo=# 
+restored_demo=# UPDATE tickets SET passenger_name = 'SANYA KORELEVA' WHERE book_ref = '0002D8';
+UPDATE 1
+restored_demo=# pg_dump --username=postgres --host=localhost restored_demo > restored_demo_backup.sql
