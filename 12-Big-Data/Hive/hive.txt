@@ -1,0 +1,259 @@
+theia@theiadocker-wl2533:/home/project/IBM-Data-Engineering$ cd /home/project
+theia@theiadocker-wl2533:/home/project$ mkdir data          
+theia@theiadocker-wl2533:/home/project$ cd data
+theia@theiadocker-wl2533:/home/project/data$ wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-BD0225EN-SkillsNetwork/data/emp.csv
+--2026-09-11 13:05:47--  https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-BD0225EN-SkillsNetwork/data/emp.csv
+Resolving cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud (cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud)... 169.63.118.104, 169.63.118.104
+Connecting to cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud (cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud)|169.63.118.104|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 854 [text/csv]
+Saving to: 'emp.csv'
+
+emp.csv              100%[===================>]     854  --.-KB/s    in 0s      
+
+2026-09-11 13:05:47 (280 MB/s) - 'emp.csv' saved [854/854]
+
+theia@theiadocker-wl2533:/home/project/data$ docker pull apache/hive:4.0.0-alpha-1
+4.0.0-alpha-1: Pulling from apache/hive
+1efc276f4ff9: Pull complete 
+a2f2f93da482: Pull complete 
+1a2de4cc9431: Pull complete 
+d2421c7a4bbf: Pull complete 
+94537d112428: Pull complete 
+c1c180ff1f7a: Pull complete 
+e7bf3bcb5626: Pull complete 
+03dc5be35f32: Pull complete 
+f40d13a78683: Pull complete 
+bbc9e14bf9a1: Pull complete 
+1a47e3a1960a: Pull complete 
+1111ce1bbac2: Pull complete 
+4f4fb700ef54: Pull complete 
+Digest: sha256:b06cfa5eb6e70a9ad6fbdbaef8369b7f4832b1adb892adce118d3eec474dc7ae
+Status: Downloaded newer image for apache/hive:4.0.0-alpha-1
+docker.io/apache/hive:4.0.0-alpha-1
+theia@theiadocker-wl2533:/home/project/dgit clone https://github.com/wenlwl0/IBM-Data-Engineering.git BM-Data-Engineering.git lone https://
+Cloning into 'IBM-Data-Engineering'...
+remote: Enumerating objects: 253, done.
+remote: Counting objects: 100% (253/253), done.
+remote: Compressing objects: 100% (201/201), done.
+remote: Total 253 (delta 79), reused 133 (delta 21), pack-reused 0 (from 0)
+Receiving objects: 100% (253/253), 21.46 MiB | 20.34 MiB/s, done.
+Resolving deltas: 100% (79/79), done.
+theia@theiadocker-wl2533:/home/project$ cd IBM-Data-Engineering
+theia@theiadocker-wl2533:/home/project/IBM-Data-Engineering$ ls        
+06-Linux-Labs  07-Database-Administration  README.md
+theia@theiadocker-wl2533:/home/project/IBM-Data-Engineering$ mkdir 12-Big-Data
+theia@theiadocker-wl2533:/home/project/IBM-Data-Engineering$ ls
+06-Linux-Labs  07-Database-Administration  12-Big-Data  README.md
+theia@theiadocker-wl2533:/home/project/IBM-Data-Engineering$ cd /home/project
+theia@theiadocker-wl2533:/home/project$ mkdir data          
+theia@theiadocker-wl2533:/home/project$ cd data
+theia@theiadocker-wl2533:/home/project/data$ wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-BD0225EN-SkillsNetwork/data/emp.csv
+--2026-09-11 13:05:47--  https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-BD0225EN-SkillsNetwork/data/emp.csv
+Resolving cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud (cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud)... 169.63.118.104, 169.63.118.104
+Connecting to cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud (cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud)|169.63.118.104|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 854 [text/csv]
+Saving to: 'emp.csv'
+
+emp.csv              100%[===================>]     854  --.-KB/s    in 0s      
+
+2026-09-11 13:05:47 (280 MB/s) - 'emp.csv' saved [854/854]
+
+theia@theiadocker-wl2533:/home/project/data$ docker pull apache/hive:4.0.0-alpha-1
+4.0.0-alpha-1: Pulling from apache/hive
+1efc276f4ff9: Pull complete 
+a2f2f93da482: Pull complete 
+1a2de4cc9431: Pull complete 
+d2421c7a4bbf: Pull complete 
+94537d112428: Pull complete 
+c1c180ff1f7a: Pull complete 
+e7bf3bcb5626: Pull complete 
+03dc5be35f32: Pull complete 
+f40d13a78683: Pull complete 
+bbc9e14bf9a1: Pull complete 
+1a47e3a1960a: Pull complete 
+1111ce1bbac2: Pull complete 
+4f4fb700ef54: Pull complete 
+Digest: sha256:b06cfa5eb6e70a9ad6fbdbaef8369b7f4832b1adb892adce118d3eec474dc7ae
+Status: Downloaded newer image for apache/hive:4.0.0-alpha-1
+docker.io/apache/hive:4.0.0-alpha-1
+theia@theiadocker-wl2533:/home/project/dgit clone https://github.com/wenlwl0/IBM-Data-Engineering.git BM-Data-Engineering.git lone https://
+Cloning into 'IBM-Data-Engineering'...
+remote: Enumerating objects: 253, done.
+remote: Counting objects: 100% (253/253), done.
+remote: Compressing objects: 100% (201/201), done.
+remote: Total 253 (delta 79), reused 133 (delta 21), pack-reused 0 (from 0)
+Receiving objects: 100% (253/253), 21.46 MiB | 20.34 MiB/s, done.
+Resolving deltas: 100% (79/79), done.
+theia@theiadocker-wl2533:/home/project$ cd IBM-Data-Engineering
+theia@theiadocker-wl2533:/home/project/IBM-Data-Engineering$ ls        
+06-Linux-Labs  07-Database-Administration  README.md
+theia@theiadocker-wl2533:/home/project/IBM-Data-Engineering$ mkdir 12-Big-Data
+theia@theiadocker-wl2533:/home/project/IBM-Data-Engineering$ ls
+06-Linux-Labs  07-Database-Administration  12-Big-Data  README.md
+theia@theiadocker-wl2533:/home/project/IBM-Data-Engineering$ cd /home/project
+theia@theiadocker-wl2533:/home/project$ mkdir data          
+theia@theiadocker-wl2533:/home/project$ cd data
+theia@theiadocker-wl2533:/home/project/data$ wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-BD0225EN-SkillsNetwork/data/emp.csv
+--2026-09-11 13:05:47--  https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-BD0225EN-SkillsNetwork/data/emp.csv
+Resolving cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud (cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud)... 169.63.118.104, 169.63.118.104
+Connecting to cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud (cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud)|169.63.118.104|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 854 [text/csv]
+Saving to: 'emp.csv'
+
+emp.csv              100%[===================>]     854  --.-KB/s    in 0s      
+
+2026-09-11 13:05:47 (280 MB/s) - 'emp.csv' saved [854/854]
+
+theia@theiadocker-wl2533:/home/project/data$ docker pull apache/hive:4.0.0-alpha-1
+4.0.0-alpha-1: Pulling from apache/hive
+1efc276f4ff9: Pull complete 
+a2f2f93da482: Pull complete 
+1a2de4cc9431: Pull complete 
+d2421c7a4bbf: Pull complete 
+94537d112428: Pull complete 
+c1c180ff1f7a: Pull complete 
+e7bf3bcb5626: Pull complete 
+03dc5be35f32: Pull complete 
+f40d13a78683: Pull complete 
+bbc9e14bf9a1: Pull complete 
+1a47e3a1960a: Pull complete 
+1111ce1bbac2: Pull complete 
+4f4fb700ef54: Pull complete 
+Digest: sha256:b06cfa5eb6e70a9ad6fbdbaef8369b7f4832b1adb892adce118d3eec474dc7ae
+Status: Downloaded newer image for apache/hive:4.0.0-alpha-1
+docker.io/apache/hive:4.0.0-alpha-1
+theia@theiadocker-wl2533:/home/project/data$ docker run -d -p 10000:10000 -p 10002:10002 --env SERVICE_NAME=hiveserver2 -v /home/project/data:/hive_custom_data --name myhiveserver apache/hive:4.0.0-alpha-1
+b9158c58b426976a18add64e3de9a253b60329450527f00dbd8c269dfde9049b
+theia@theiadocker-wl2533:/home/project/data$ docker run -d -p 10000:10000 -p 10002:10002 --env SERVICE_NAME=hiveserver2 -v /home/project/data:/hive_custom_data --name myhiveserver apache/hive:4.0.0-alpha-1
+docker: Error response from daemon: Conflict. The container name "/myhiveserver" is already in use by container "b9158c58b426976a18add64e3de9a253b60329450527f00dbd8c269dfde9049b". You have to remove (or rename) that container to be able to reuse that name.
+
+Run 'docker run --help' for more information
+theia@theiadocker-wl2533:/home/project/data$ docker exec -it myhiveserver beeline -u 'jdbc:hive2://localhost:10000/'
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Connecting to jdbc:hive2://localhost:10000/
+Connected to: Apache Hive (version 4.0.0-alpha-1)
+Driver: Hive JDBC (version 4.0.0-alpha-1)
+Transaction isolation: TRANSACTION_REPEATABLE_READ
+Beeline version 4.0.0-alpha-1 by Apache Hive
+0: jdbc:hive2://localhost:10000/> create table Employee(emp_id string, emp_name string, salary  int)  row format delimited fields terminated by ',' ;
+INFO  : Compiling command(queryId=hive_20260911171603_2a73a39a-6291-4b06-896c-c25fcaed8363): create table Employee(emp_id string, emp_name string, salary  int)  row format delimited fields terminated by ','
+INFO  : Semantic Analysis Completed (retrial = false)
+INFO  : Created Hive schema: Schema(fieldSchemas:null, properties:null)
+INFO  : Completed compiling command(queryId=hive_20260911171603_2a73a39a-6291-4b06-896c-c25fcaed8363); Time taken: 1.886 seconds
+INFO  : Concurrency mode is disabled, not creating a lock manager
+INFO  : Executing command(queryId=hive_20260911171603_2a73a39a-6291-4b06-896c-c25fcaed8363): create table Employee(emp_id string, emp_name string, salary  int)  row format delimited fields terminated by ','
+INFO  : Starting task [Stage-0:DDL] in serial mode
+INFO  : Completed executing command(queryId=hive_20260911171603_2a73a39a-6291-4b06-896c-c25fcaed8363); Time taken: 1.042 seconds
+No rows affected (3.206 seconds)
+0: jdbc:hive2://localhost:10000/> 
+0: jdbc:hive2://localhost:10000/> show tables;
+INFO  : Compiling command(queryId=hive_20260911171609_b8acedf2-2d9a-4248-bf4d-a239a752aa59): show tables
+INFO  : Semantic Analysis Completed (retrial = false)
+INFO  : Created Hive schema: Schema(fieldSchemas:[FieldSchema(name:tab_name, type:string, comment:from deserializer)], properties:null)
+INFO  : Completed compiling command(queryId=hive_20260911171609_b8acedf2-2d9a-4248-bf4d-a239a752aa59); Time taken: 0.111 seconds
+INFO  : Concurrency mode is disabled, not creating a lock manager
+INFO  : Executing command(queryId=hive_20260911171609_b8acedf2-2d9a-4248-bf4d-a239a752aa59): show tables
+INFO  : Starting task [Stage-0:DDL] in serial mode
+INFO  : Completed executing command(queryId=hive_20260911171609_b8acedf2-2d9a-4248-bf4d-a239a752aa59); Time taken: 0.118 seconds
++-----------+
+| tab_name  |
++-----------+
+| employee  |
++-----------+
+1 row selected (0.414 seconds)
+0: jdbc:hive2://localhost:10000/> LOAD DATA INPATH '/hive_custom_data/emp.csv' INTO TABLE Employee;
+INFO  : Compiling command(queryId=hive_20260911171622_e73c7e5c-d20b-448d-8f87-f8e48733ffcc): LOAD DATA INPATH '/hive_custom_data/emp.csv' INTO TABLE Employee
+INFO  : Semantic Analysis Completed (retrial = false)
+INFO  : Created Hive schema: Schema(fieldSchemas:null, properties:null)
+INFO  : Completed compiling command(queryId=hive_20260911171622_e73c7e5c-d20b-448d-8f87-f8e48733ffcc); Time taken: 0.245 seconds
+INFO  : Concurrency mode is disabled, not creating a lock manager
+INFO  : Executing command(queryId=hive_20260911171622_e73c7e5c-d20b-448d-8f87-f8e48733ffcc): LOAD DATA INPATH '/hive_custom_data/emp.csv' INTO TABLE Employee
+INFO  : Starting task [Stage-0:MOVE] in serial mode
+INFO  : Loading data to table default.employee from file:/hive_custom_data/emp.csv
+INFO  : Starting task [Stage-1:STATS] in serial mode
+INFO  : Executing stats task
+INFO  : Table default.employee stats: [numFiles=1, numRows=0, totalSize=854, rawDataSize=0, numFilesErasureCoded=0]
+INFO  : Completed executing command(queryId=hive_20260911171622_e73c7e5c-d20b-448d-8f87-f8e48733ffcc); Time taken: 1.998 seconds
+No rows affected (2.261 seconds)
+0: jdbc:hive2://localhost:10000/> 
+0: jdbc:hive2://localhost:10000/> SELECT * FROM employee;
+INFO  : Compiling command(queryId=hive_20260911171629_dd2e7921-eb3f-4ec1-858e-b58481badd90): SELECT * FROM employee
+INFO  : No Stats for default@employee, Columns: emp_name, salary, emp_id
+INFO  : Semantic Analysis Completed (retrial = false)
+INFO  : Created Hive schema: Schema(fieldSchemas:[FieldSchema(name:employee.emp_id, type:string, comment:null), FieldSchema(name:employee.emp_name, type:string, comment:null), FieldSchema(name:employee.salary, type:int, comment:null)], properties:null)
+INFO  : Completed compiling command(queryId=hive_20260911171629_dd2e7921-eb3f-4ec1-858e-b58481badd90); Time taken: 2.832 seconds
+INFO  : Concurrency mode is disabled, not creating a lock manager
+INFO  : Executing command(queryId=hive_20260911171629_dd2e7921-eb3f-4ec1-858e-b58481badd90): SELECT * FROM employee
+INFO  : Completed executing command(queryId=hive_20260911171629_dd2e7921-eb3f-4ec1-858e-b58481badd90); Time taken: 0.001 seconds
++------------------+--------------------+------------------+
+| employee.emp_id  | employee.emp_name  | employee.salary  |
++------------------+--------------------+------------------+
+| emp_id           | emp_name           | NULL             |
+| 198              | Donald             | 2600             |
+| 199              | Douglas            | 2600             |
+| 200              | Jennifer           | 4400             |
+| 201              | Michael            | 13000            |
+| 202              | Pat                | 6000             |
+| 203              | Susan              | 6500             |
+| 204              | Hermann            | 10000            |
+| 205              | Shelley            | 12008            |
+| 206              | William            | 8300             |
+| 100              | Steven             | 24000            |
+| 101              | Neena              | 17000            |
+| 102              | Lex                | 17000            |
+| 103              | Alexander          | 9000             |
+| 104              | Bruce              | 6000             |
+| 105              | David              | 4800             |
+| 106              | Valli              | 4800             |
+| 107              | Diana              | 4200             |
+| 108              | Nancy              | 12008            |
+| 109              | Daniel             | 9000             |
+| 110              | John               | 8200             |
+| 111              | Ismael             | 7700             |
+| 112              | Jose Manuel        | 7800             |
+| 113              | Luis               | 6900             |
+| 114              | Den                | 11000            |
+| 115              | Alexander          | 3100             |
+| 116              | Shelli             | 2900             |
+| 117              | Sigal              | 2800             |
+| 118              | Guy                | 2600             |
+| 119              | Karen              | 2500             |
+| 120              | Matthew            | 8000             |
+| 121              | Adam               | 8200             |
+| 122              | Payam              | 7900             |
+| 123              | Shanta             | 6500             |
+| 124              | Kevin              | 5800             |
+| 125              | Julia              | 3200             |
+| 126              | Irene              | 2700             |
+| 127              | James              | 2400             |
+| 128              | Steven             | 2200             |
+| 129              | Laura              | 3300             |
+| 130              | Mozhe              | 2800             |
+| 131              | James              | 2500             |
+| 132              | TJ                 | 2100             |
+| 133              | Jason              | 3300             |
+| 134              | Michael            | 2900             |
+| 135              | Ki                 | 2400             |
+| 136              | Hazel              | 2200             |
+| 137              | Renske             | 3600             |
+| 138              | Stephen            | 3200             |
+| 139              | John               | 2700             |
+| 140              | Joshua             | 2500             |
++------------------+--------------------+------------------+
+51 rows selected (2.929 seconds)
+0: jdbc:hive2://localhost:10000/> 
+0: jdbc:hive2://localhost:10000/> [WARN] Failed to create directory: /home/hive/.beeline
+No such file or directory
+Closing: 0: jdbc:hive2://localhost:10000/
