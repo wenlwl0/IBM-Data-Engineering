@@ -1,4 +1,9 @@
-Create a table in Hive
-Add data to the table using file
-Add data to the table using insert
-Query the data in the table using SQL commands
+*Hive*
+*Create a table in Hive
+*Add data to the table using file
+*Add data to the table using insert
+*Query the data in the table using SQL commands
+
+*Hadoop Map-Reduce*
+*Run a single-node Hadoop instance
+*Perform a word count using Hadoop Map Reduce.
