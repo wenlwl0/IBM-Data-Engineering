@@ -1,0 +1,497 @@
+theia@theiadocker-wl2533:/home/project$ git clone https://github.com/ibm-developer-skills-network/ooxwv-docker_hadoop.git
+Cloning into 'ooxwv-docker_hadoop'...
+remote: Enumerating objects: 50, done.
+remote: Counting objects: 100% (50/50), done.
+remote: Compressing objects: 100% (45/45), done.
+remote: Total 50 (delta 7), reused 38 (delta 3), pack-reused 0 (from 0)
+Receiving objects: 100% (50/50), 47.65 KiB | 15.88 MiB/s, done.
+Resolving deltas: 100% (7/7), done.
+theia@theiadocker-wl2533:/home/project$ cd ooxwv-docker_hadoop
+theia@theiadocker-wl2533:/home/project/ooxwv-d
+ocker_hadoop$ docker-compose up -d
+WARN[0000] /home/project/ooxwv-docker_hadoop/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+[+] Running 0/28
+[+] Running 1/28 [⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 1.8s 
+[+] Running 1/28 [⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 2.0s 
+[+] Running 1/28 [⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 2.1s 
+ ⠙ historyserver [⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 2.2s 
+   ⠋ 3192219afd04 Downloading  1.383MB/45.38MB[+] Running 1/28d Pulling fs layer       1.0s 
+ ⠹ historyserver [⠀⠀⣿⣤⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 2.3s 
+   ⠙ 3192219afd04 Downloading  2.308MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠸ historyserver [⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 2.4s 
+[+] Running 2/284 Downloading  2.767MB/45.38MB
+ ⠼ historyserver [⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 2.5s 
+[+] Running 2/284 Downloading  3.225MB/45.38MB
+ ⠴ historyserver [⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 2.6s 
+[+] Running 2/284 Downloading  3.225MB/45.38MB
+ ⠦ historyserver [⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 2.7s 
+[+] Running 2/284 Downloading  4.143MB/45.38MB
+ ⠧ historyserver [⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 2.8s 
+[+] Running 2/284 Downloading  4.143MB/45.38MB
+ ⠇ historyserver [⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 2.9s 
+[+] Running 2/284 Downloading   5.06MB/45.38MB
+ ⠏ historyserver [⡀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 3.0s 
+[+] Running 2/284 Downloading  5.978MB/45.38MB
+ ⠋ historyserver [⡀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 3.1s 
+   ⠏ 3192219afd04 Downloading  5.978MB/45.38MB[+] Running 2/28f Download complete      1.2s 
+ ⠙ historyserver [⡀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 3.2s 
+   ⠋ 3192219afd04 Downloading  6.437MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠹ historyserver [⡀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 3.3s 
+   ⠙ 3192219afd04 Downloading  6.895MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠸ historyserver [⡀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 3.4s 
+   ⠹ 3192219afd04 Downloading  7.354MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠼ historyserver [⡀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 3.5s 
+   ⠸ 3192219afd04 Downloading  7.354MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠴ historyserver [⡀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 3.6s 
+   ⠼ 3192219afd04 Downloading  7.813MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠦ historyserver [⡀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 3.7s 
+   ⠴ 3192219afd04 Downloading  8.272MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠧ historyserver [⡀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 3.8s 
+   ⠦ 3192219afd04 Downloading  8.272MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠇ historyserver [⡀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 3.9s 
+   ⠧ 3192219afd04 Downloading   8.73MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠏ historyserver [⡀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 4.0s 
+   ⠇ 3192219afd04 Downloading  9.189MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠋ historyserver [⡀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 4.1s 
+   ⠏ 3192219afd04 Downloading  9.189MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠙ historyserver [⡀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 4.2s 
+   ⠋ 3192219afd04 Downloading  9.648MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠹ historyserver [⡀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 4.3s 
+   ⠙ 3192219afd04 Downloading  10.11MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠸ historyserver [⡀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 4.4s 
+   ⠹ 3192219afd04 Downloading  10.57MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠼ historyserver [⡀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 4.5s 
+   ⠸ 3192219afd04 Downloading  10.57MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠴ historyserver [⡀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 4.6s 
+   ⠼ 3192219afd04 Downloading  11.02MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠦ historyserver [⣀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 4.7s 
+   ⠴ 3192219afd04 Downloading  11.48MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠧ historyserver [⣀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 4.8s 
+   ⠦ 3192219afd04 Downloading  11.48MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠇ historyserver [⣀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 4.9s 
+   ⠧ 3192219afd04 Downloading  11.94MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠏ historyserver [⣀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 5.0s 
+   ⠇ 3192219afd04 Downloading   12.4MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠋ historyserver [⣀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 5.1s 
+   ⠏ 3192219afd04 Downloading   12.4MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠙ historyserver [⣀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 5.2s 
+   ⠋ 3192219afd04 Downloading  13.32MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠹ historyserver [⣀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 5.3s 
+   ⠙ 3192219afd04 Downloading  13.32MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠸ historyserver [⣀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 5.4s 
+   ⠹ 3192219afd04 Downloading  13.78MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠼ historyserver [⣀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 5.5s 
+   ⠸ 3192219afd04 Downloading  14.24MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠴ historyserver [⣀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 5.6s 
+   ⠼ 3192219afd04 Downloading  14.69MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠦ historyserver [⣀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 5.7s 
+   ⠴ 3192219afd04 Downloading  14.69MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠧ historyserver [⣀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 5.8s 
+   ⠦ 3192219afd04 Downloading  15.15MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠇ historyserver [⣀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 5.9s 
+   ⠧ 3192219afd04 Downloading  15.15MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠏ historyserver [⣀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 6.0s 
+   ⠇ 3192219afd04 Downloading  15.61MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠋ historyserver [⣀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 6.1s 
+   ⠏ 3192219afd04 Downloading  16.07MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠙ historyserver [⣀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 6.2s 
+   ⠋ 3192219afd04 Downloading  16.53MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠹ historyserver [⣀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 6.3s 
+   ⠙ 3192219afd04 Downloading  16.53MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠸ historyserver [⣄⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 6.4s 
+   ⠹ 3192219afd04 Downloading  17.45MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠼ historyserver [⣄⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 6.5s 
+   ⠸ 3192219afd04 Downloading  17.45MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠴ historyserver [⣄⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 6.6s 
+   ⠼ 3192219afd04 Downloading  17.91MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠦ historyserver [⣄⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 6.7s 
+   ⠴ 3192219afd04 Downloading  18.36MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠧ historyserver [⣄⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 6.8s 
+   ⠦ 3192219afd04 Downloading  18.82MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠇ historyserver [⣄⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 6.9s 
+   ⠧ 3192219afd04 Downloading  18.82MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠏ historyserver [⣄⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 7.0s 
+   ⠇ 3192219afd04 Downloading  19.28MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠋ historyserver [⣄⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 7.1s 
+   ⠏ 3192219afd04 Downloading  19.74MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠙ historyserver [⣄⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 7.2s 
+   ⠋ 3192219afd04 Downloading  19.74MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠹ historyserver [⣄⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 7.3s 
+   ⠙ 3192219afd04 Downloading  20.66MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠸ historyserver [⣄⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 7.4s 
+   ⠹ 3192219afd04 Downloading  21.12MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠼ historyserver [⣄⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 7.5s 
+   ⠸ 3192219afd04 Downloading  21.58MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠴ historyserver [⣄⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 7.6s 
+   ⠼ 3192219afd04 Downloading  21.58MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠦ historyserver [⣄⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 7.7s 
+   ⠴ 3192219afd04 Downloading  22.03MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠧ historyserver [⣄⡀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 7.8s 
+   ⠦ 3192219afd04 Downloading  22.49MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠇ historyserver [⣤⡀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 7.9s 
+   ⠧ 3192219afd04 Downloading  22.95MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠏ historyserver [⣤⡀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 8.0s 
+   ⠇ 3192219afd04 Downloading  22.95MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠋ historyserver [⣤⡀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 8.1s 
+   ⠏ 3192219afd04 Downloading  23.41MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠙ historyserver [⣤⡀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 8.2s 
+   ⠋ 3192219afd04 Downloading  23.87MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠹ historyserver [⣤⡀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 8.3s 
+   ⠙ 3192219afd04 Downloading  24.33MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠸ historyserver [⣤⡀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 8.4s 
+   ⠹ 3192219afd04 Downloading  24.79MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠼ historyserver [⣤⡀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 8.5s 
+   ⠸ 3192219afd04 Downloading  24.79MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠴ historyserver [⣤⡀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 8.6s 
+   ⠼ 3192219afd04 Downloading  25.25MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠦ historyserver [⣤⡀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 8.7s 
+   ⠴ 3192219afd04 Downloading   25.7MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠧ historyserver [⣤⡀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 8.8s 
+   ⠦ 3192219afd04 Downloading  26.16MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠇ historyserver [⣤⡀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 8.9s 
+   ⠧ 3192219afd04 Downloading  26.62MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠏ historyserver [⣤⡀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 9.0s 
+   ⠇ 3192219afd04 Downloading  26.62MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠋ historyserver [⣤⡀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 9.1s 
+   ⠏ 3192219afd04 Downloading  27.08MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠙ historyserver [⣤⡀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 9.2s 
+   ⠋ 3192219afd04 Downloading  27.54MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠹ historyserver [⣤⡀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 9.3s 
+   ⠙ 3192219afd04 Downloading     28MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠸ historyserver [⣤⡀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 9.4s 
+   ⠹ 3192219afd04 Downloading     28MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠼ historyserver [⣤⡀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 9.5s 
+   ⠸ 3192219afd04 Downloading  28.46MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠴ historyserver [⣦⡀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 9.6s 
+   ⠼ 3192219afd04 Downloading  28.92MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠦ historyserver [⣦⡀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 9.7s 
+   ⠴ 3192219afd04 Downloading  29.37MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠧ historyserver [⣦⡀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 9.8s 
+   ⠦ 3192219afd04 Downloading  29.83MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠇ historyserver [⣦⡀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 9.9s 
+   ⠧ 3192219afd04 Downloading  29.83MB/45.38MB[+] Running 2/280 Download complete      0.7s 
+ ⠏ historyserver [⣦⡀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 10.0s .8s 92329e81aec4 Downloading  23.76MB/359.7MB
+   ⠇ 3192219afd04 Downloading  30.29MB/45.38MB[+] Running 2/28f Download complete      1.2s 
+ ⠋ historyserver [⣦⡀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 10.1s .9s 8b1800105b98 Waiting                8.7s 
+   ⠏ 3192219afd04 Downloading  30.75MB/45.38MB[+] Running 2/28f Download complete      1.2s 
+ ⠙ historyserver [⣦⡀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 10.2s .0s c3a84a3e49c8 Waiting                8.8s 
+   ⠋ 3192219afd04 Downloading  31.21MB/45.38MB[+] Running 2/28f Download complete      1.2s 
+ ⠹ historyserver [⣦⡀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 10.3s .1s c3a84a3e49c8 Waiting                8.9s 
+   ⠙ 3192219afd04 Downloading  31.21MB/45.38MB[+] Running 2/28f Download complete      1.2s 
+ ⠸ historyserver [⣦⡀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 10.4s .2s c3a84a3e49c8 Waiting                9.0s 
+   ⠹ 3192219afd04 Downloading  31.67MB/45.38MB[+] Running 2/28f Download complete      1.2s 
+ ⠼ historyserver [⣦⡀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling 10.5s .3s c3a84a3e49c8 Waiting                9.1s 
+   ⠸ 3192219afd04 Downloading  32.13MB/45.38MB9.4s 77920a3e82af Dow[+[+] Running 28/28 1.2s 
+ ✔ historyserver Pulled                                        81.5s 
+   ✔ 3192219afd04 Pull complete                                19.9s 
+   ✔ 7127a1d8cced Pull complete                                58.6s 
+   ✔ 883a89599900 Pull complete                                58.6s 
+   ✔ 77920a3e82af Pull complete                                58.7s 
+   ✔ 92329e81aec4 Pull complete                                80.1s 
+   ✔ f373218fec59 Pull complete                                80.1s 
+   ✔ aa53513fe997 Pull complete                                80.1s 
+   ✔ 8b1800105b98 Pull complete                                80.1s 
+   ✔ c3a84a3e49c8 Pull complete                                80.2s 
+   ✔ a65640a64a76 Pull complete                                80.2s 
+   ✔ b2dc88cebe05 Pull complete                                80.3s 
+   ✔ 13b908760168 Pull complete                                80.3s 
+   ✔ 0991d53828a1 Pull complete                                80.4s 
+ ✔ datanode Pulled                                             81.5s 
+   ✔ 3ca2ec07878c Pull complete                                80.0s 
+   ✔ 26c2dd45430e Pull complete                                80.0s 
+   ✔ 13c9c87a46cb Pull complete                                80.1s 
+ ✔ resourcemanager Pulled                                      81.5s 
+   ✔ b0d764123f3e Pull complete                                79.9s 
+   ✔ b04394ddb35d Pull complete                                79.9s 
+ ✔ nodemanager1 Pulled                                         81.4s 
+   ✔ beaa171f32f6 Pull complete                                79.8s 
+   ✔ 50dda04de8a9 Pull complete                                79.8s 
+ ✔ namenode Pulled                                             81.5s 
+   ✔ facffb3a6de3 Pull complete                                80.1s 
+   ✔ c71a6df73788 Pull complete                                80.2s 
+   ✔ 73b8c0ccb707 Pull complete                                80.2s 
+[+] Running 9/9
+ ✔ Network ooxwv-docker_hadoop_default              Created     0.1s 
+ ✔ Volume ooxwv-docker_hadoop_hadoop_datanode       Created     0.0s 
+ ✔ Volume ooxwv-docker_hadoop_hadoop_historyserver  Created     0.0s 
+ ✔ Volume ooxwv-docker_hadoop_hadoop_namenode       Created     0.0s 
+ ✔ Container nodemanager                            Started    21.0s 
+ ✔ Container datanode                               Started    21.1s 
+ ✔ Container namenode                               Started    21.0s 
+ ✔ Container resourcemanager                        Started    21.1s 
+ ✔ Container historyserver                          Started    21.1s 
+theia@theiadocker-wl2533:/home/project/ooxwv-docker_hadoop$ docker exec -it namenode /bin/bash
+root@a662f10897e8:/# ls /opt/hadoop-3.2.1/etc/hadoop/*.xml
+/opt/hadoop-3.2.1/etc/hadoop/capacity-scheduler.xml
+/opt/hadoop-3.2.1/etc/hadoop/core-site.xml
+/opt/hadoop-3.2.1/etc/hadoop/hadoop-policy.xml
+/opt/hadoop-3.2.1/etc/hadoop/hdfs-site.xml
+/opt/hadoop-3.2.1/etc/hadoop/httpfs-site.xml
+/opt/hadoop-3.2.1/etc/hadoop/kms-acls.xml
+/opt/hadoop-3.2.1/etc/hadoop/kms-site.xml
+/opt/hadoop-3.2.1/etc/hadoop/mapred-site.xml
+/opt/hadoop-3.2.1/etc/hadoop/yarn-site.xml
+root@a662f10897e8:/# hdfs dfs -mkdir -p /user/root/input
+root@a662f10897e8:/# hdfs dfs -put $HADOOP_HOME/etc/hadoop/*.xml /user/root/input
+2026-09-12 16:10:48,881 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+
+2026-09-12 16:10:49,315 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2026-09-12 16:10:49,355 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2026-09-12 16:10:49,788 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2026-09-12 16:10:50,221 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2026-09-12 16:10:50,661 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2026-09-12 16:10:50,691 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2026-09-12 16:10:50,729 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2026-09-12 16:10:50,753 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+root@a662f10897e8:/# 
+root@a662f10897e8:/# hdfs dfs -put $HADOOP_HOME/etc/hadoop/*.xml /user/root/input
+
+put: `/user/root/input/capacity-scheduler.xml': File exists
+put: `/user/root/input/core-site.xml': File exists
+put: `/user/root/input/hadoop-policy.xml': File exists
+put: `/user/root/input/hdfs-site.xml': File exists
+put: `/user/root/input/httpfs-site.xml': File exists
+put: `/user/root/input/kms-acls.xml': File exists
+put: `/user/root/input/kms-site.xml': File exists
+put: `/user/root/input/mapred-site.xml': File exists
+put: `/user/root/input/yarn-site.xml': File exists
+root@a662f10897e8:/# 
+root@a662f10897e8:/# curl https://raw.githubusercontent.com/ibm-developer-skills-network/ooxwv-docker_hadoop/master/SampleMapReduce.txt --output data.txt
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--100  6858  100  6858    0     0  58081      0 --:--:-- --:--:-- --:--:-- 58615
+root@a662f10897e8:/# 
+root@a662f10897e8:/# hdfs dfs -put data.txt /user/root/
+
+2026-09-12 16:11:16,319 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+root@a662f10897e8:/# 
+root@a662f10897e8:/# hdfs dfs -cat /user/root/data.txt
+
+2026-09-12 16:11:21,796 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+What is big data? More than volume, velocity and variety -
+
+Get your head around the topic of big data
+By J. Steven Perry
+Published May 22, 2017
+
+You’ve heard of Big Data, right? We’re all supposed to say yes, and Big Data is one of those topics I thought I understood until I tried explaining it. I realized that I needed to get my head around it at a high level. If you’re like I was, then this blog post is for you.
+
+The Problem(s)
+Any technology is only useful if it solves a problem (or problems). So what problem(s) does Big Data solve?
+
+As we all know, there is data, lots of it: historical data, sure, but also new data generated from social media apps, click stream data from web applications, IoT sensor data, and on and on. The amount of data is larger than ever, coming in at ever-increasing rates, and in many different formats.
+
+The business value in the data comes from the meaning we can harvest from it. And deriving business value from all that data is a big problem. Why? Let’s break it down.
+
+Data Volume
+People are more connected than ever before, and this interconnection leads to more and more data sources, resulting in an amount of data that is larger than ever before (and constantly growing). The increased volume of data requires ever increasing computing power in order to derive value (meaning) from the data. Traditional computing methods simply don’t work on the volume of data accumulating today!
+
+Data Velocity
+The speed and directions from which data come into the enterprise is increasing due to interconnection and advances in network technology, so it is coming in faster than we can make sense out of it [2]. And the faster the data come in and more varied the sources, the harder it is to derive value (meaning) from the data. Traditional computing methods don’t work on data coming in at today’s speeds!
+
+Data Variety
+More sources of data means more varieties of data in different formats: from traditional documents and databases, to semi-structured and unstructured data from click streams, GPS location data, social media apps, and IoT (to name a few). Different data formats means it’s tougher to derive value (meaning) from the data because it must all be extracted for processing in different ways. Traditional computing methods don’t work on all these different varieties of data!
+
+What Big Data is NOT
+Traditional data like documents and databases
+It’s true, there are LOTS of documents and databases in the world, and while these sources contribute to Big Data, they themselves are not Big Data. The varieties of data that are being collected today is changing, and this is driving Big Data. Some of the data are structured, like traditional documents and databases but most are semi-structured, or unstructured.
+
+Just a synonym for “lots of data”
+Big Data is much more than just a “lot of data”.
+
+Lots of data is driving Big Data, but to associate the volume of data with the term Big Data and stop there is a mistake.
+
+It’s not about the data
+Big Data is not about the data [1], any more than philosophy is about words. Big Data is about the value that can be extracted from the data, or, the MEANING contained in the data.
+
+A single technology – rather it’s an entire technology ecosystem
+Big Data is a way of harvesting raw data from multiple, disparate data sources, storing the data for use by analytics programs, and using the raw data to derive value (meaning) from the data in a whole new ways. We’re talking data from traditional business applications like CRM and web applications, combined with data from a growing number of sensors (IoT), and social media like Facebook, Twitter, and LinkedIn.
+
+This means that no single technology can be called Big Data, which requires a tightly coordinated ecosystem of data acquisition, storage, and application technologies to make it work.
+
+A trend
+Big Data is the natural evolution of the way to cope with the vast quantities, types, and volume of data from today’s applications. The volume, velocity and variety of data coming into today’s enterprise means that these problems can only be solved by a solution that is equally organic, and capable of continued evolution.
+
+In other words, it’s the ways we are using software and creating the data that are driving Big Data.
+
+Unless we change the ways we use software (like apps), platforms (like social media), and core infrastructure technologies (like the internet), Big Data is here to stay. Case in point: Give up Snapchat? LinkedIn? Facebook? Twitter? Not gonna happen.
+
+
+The Solution
+In my opinion, Big Data is really a misnomer. As I mentioned earlier, Big Data is no more about the data than philosophy is about words. Big Data is about MEANING derived from the data. Maybe we should call it “Big Meaning” (granted, that’s not as catchy, but it makes more sense to me).
+
+So how does Big Meaning, um, I mean Big Data, solve the problems of data volume, velocity and variety?
+
+Volume
+Well, first, the data has to be stored somewhere, because without somewhere to store the data, it cannot be made available for analysis.
+
+Fortunately, storage is cheaper, more reliable, and – thanks to the cloud – more accessible than ever.
+
+Velocity
+We first need to deal with the speed at which the data comes in, and automated, intelligent systems that run lights-out, 24 x 7 x 365 help harvest patterns (meaning) in the data that would be impossible to detect through manual analysis. Advances in machine learning techniques help deal with the Velocity problem. Artificial neural networks, for example, can be trained to detect patterns, apply that knowledge to make predictions, and even adapt to the changing data on the fly.
+
+Variety
+Then there are the variety of directions (sources) from which the data come in. Patterns in the data are only good if we can look at what has happened before (historical data) and use them to predict something helpful or interesting about the future.
+
+However, as the variety of data sources continues to grow, so does th[+] Running 22/28arvesting meaning from the data. Human beings simply
+[+] Running 28/28[⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿] 564.9MB / 565.1MB Pulling     73.9s 
+ ✔ historyserver Pulled                                        81.5s 
+   ✔ 3192219afd04 Pull complete                                19.9s 
+   ✔ 7127a1d8cced Pull complete                                58.6s 
+   ✔ 883a89599900 Pull complete                                58.6s 
+   ✔ 77920a3e82af Pull complete                                58.7s 
+   ✔ 92329e81aec4 Pull complete                                80.1s 
+   ✔ f373218fec59 Pull complete                                80.1s 
+   ✔ aa53513fe997 Pull complete                                80.1s 
+   ✔ 8b1800105b98 Pull complete                                80.1s 
+   ✔ c3a84a3e49c8 Pull complete                                80.2s 
+   ✔ a65640a64a76 Pull complete                                80.2s 
+   ✔ b2dc88cebe05 Pull complete                                80.3s 
+   ✔ 13b908760168 Pull complete                                80.3s 
+   ✔ 0991d53828a1 Pull complete                                80.4s 
+ ✔ datanode Pulled                                             81.5s 
+   ✔ 3ca2ec07878c Pull complete                                80.0s 
+   ✔ 26c2dd45430e Pull complete                                80.0s 
+   ✔ 13c9c87a46cb Pull complete                                80.1s 
+ ✔ resourcemanager Pulled                                      81.5s 
+   ✔ b0d764123f3e Pull complete                                79.9s 
+   ✔ b04394ddb35d Pull complete                                79.9s 
+ ✔ nodemanager1 Pulled                                         81.4s 
+   ✔ beaa171f32f6 Pull complete                                79.8s 
+   ✔ 50dda04de8a9 Pull complete                                79.8s 
+ ✔ namenode Pulled                                             81.5s 
+   ✔ facffb3a6de3 Pull complete                                80.1s 
+   ✔ c71a6df73788 Pull complete                                80.2s 
+   ✔ 73b8c0ccb707 Pull complete                                80.2s 
+[+] Running 9/9a9 Download complete                            19.3s 
+ ✔ Network ooxwv-docker_hadoop_default              Created     0.1s 
+ ✔ Volume ooxwv-docker_hadoop_hadoop_datanode       Created     0.0s 
+ ✔ Volume ooxwv-docker_hadoop_hadoop_historyserver  Created     0.0s 
+ ✔ Volume ooxwv-docker_hadoop_hadoop_namenode       Created     0.0s 
+ ✔ Container nodemanager                            Started    21.0s 
+ ✔ Container datanode                               Started    21.1s 
+ ✔ Container namenode                               Started    21.0s 
+ ✔ Container resourcemanager                        Started    21.1s 
+ ✔ Container historyserver                          Started    21.1s 
+theia@theiadocker-wl2533:/home/project/ooxwv-docker_hadoop$ docker exec -it namenode /bin/bash
+root@a662f10897e8:/# ls /opt/hadoop-3.2.1/etc/hadoop/*.xml
+/opt/hadoop-3.2.1/etc/hadoop/capacity-scheduler.xml
+/opt/hadoop-3.2.1/etc/hadoop/core-site.xml
+/opt/hadoop-3.2.1/etc/hadoop/hadoop-policy.xml
+/opt/hadoop-3.2.1/etc/hadoop/hdfs-site.xml
+/opt/hadoop-3.2.1/etc/hadoop/httpfs-site.xml
+/opt/hadoop-3.2.1/etc/hadoop/kms-acls.xml
+/opt/hadoop-3.2.1/etc/hadoop/kms-site.xml
+/opt/hadoop-3.2.1/etc/hadoop/mapred-site.xml
+/opt/hadoop-3.2.1/etc/hadoop/yarn-site.xml
+root@a662f10897e8:/# hdfs dfs -mkdir -p /user/root/input
+root@a662f10897e8:/# hdfs dfs -put $HADOOP_HOME/etc/hadoop/*.xml /user/root/input
+2026-09-12 16:10:48,881 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+
+2026-09-12 16:10:49,315 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2026-09-12 16:10:49,355 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2026-09-12 16:10:49,788 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2026-09-12 16:10:50,221 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2026-09-12 16:10:50,661 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2026-09-12 16:10:50,691 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2026-09-12 16:10:50,729 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2026-09-12 16:10:50,753 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+root@a662f10897e8:/# 
+root@a662f10897e8:/# hdfs dfs -put $HADOOP_HOME/etc/hadoop/*.xml /user/root/input
+
+put: `/user/root/input/capacity-scheduler.xml': File exists
+put: `/user/root/input/core-site.xml': File exists
+put: `/user/root/input/hadoop-policy.xml': File exists
+put: `/user/root/input/hdfs-site.xml': File exists
+put: `/user/root/input/httpfs-site.xml': File exists
+put: `/user/root/input/kms-acls.xml': File exists
+put: `/user/root/input/kms-site.xml': File exists
+put: `/user/root/input/mapred-site.xml': File exists
+put: `/user/root/input/yarn-site.xml': File exists
+root@a662f10897e8:/# 
+root@a662f10897e8:/# curl https://raw.githubusercontent.com/ibm-developer-skills-network/ooxwv-docker_hadoop/master/SampleMapReduce.txt --output data.txt
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--100  6858  100  6858    0     0  58081      0 --:--:-- --:--:-- --:--:-- 58615
+root@a662f10897e8:/# 
+root@a662f10897e8:/# hdfs dfs -put data.txt /user/root/
+
+2026-09-12 16:11:16,319 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+root@a662f10897e8:/# 
+root@a662f10897e8:/# hdfs dfs -cat /user/root/data.txt
+
+2026-09-12 16:11:21,796 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+What is big data? More than volume, velocity and variety -
+
+Get your head around the topic of big data
+By J. Steven Perry
+Published May 22, 2017
+
+You’ve heard of Big Data, right? We’re all supposed to say yes, and Big Data is one of those topics I thought I understood until I tried explaining it. I realized that I needed to get my head around it at a high level. If you’re like I was, then this blog post is for you.
+
+The Problem(s)
+Any technology is only useful if it solves a problem (or problems). So what problem(s) does Big Data solve?
+
+As we all know, there is data, lots of it: historical data, sure, but also new data generated from social media apps, click stream data from web applications, IoT sensor data, and on and on. The amount of data is larger than ever, coming in at ever-increasing rates, and in many different formats.
+
+The business value in the data comes from the meaning we can harvest from it. And deriving business value from all that data is a big problem. Why? Let’s break it down.
+
+Data Volume
+People are more connected than ever before, and this interconnection leads to more and more data sources, resulting in an amount of data that is larger than ever before (and constantly growing). The increased volume of data requires ever increasing computing power in order to derive value (meaning) from the data. Traditional computing methods simply don’t work on the volume of data accumulating today!
+
+Data Velocity
+The speed and directions from which data come into the enterprise is increasing due to interconnection and advances in network technology, so it is coming in faster than we can make sense out of it [2]. And the faster the data come in and more varied the sources, the harder it is to derive value (meaning) from the data. Traditional computing methods don’t work on data coming in at today’s speeds!
+
+Data Variety
+More sources of data means more varieties of data in different formats: from traditional documents and databases, to semi-structured and unstructured data from click streams, GPS location data, social media apps, and IoT (to name a few). Different data formats means it’s tougher to derive value (meaning) from the data because it must all be extracted for processing in different ways. Traditional computing methods don’t work on all these different varieties of data!
+
+What Big Data is NOT
+Traditional data like documents and databases
+It’s true, there are LOTS of documents and databases in the world, and while these sources contribute to Big Data, they themselves are not Big Data. The varieties of data that are being collected today is changing, and this is driving Big Data. Some of the data are structured, like traditional documents and databases but most are semi-structured, or unstructured.
+
+Just a synonym for “lots of data”
+Big Data is much more than just a “lot of data”.
+
+Lots of data is driving Big Data, but to associate the volume of data with the term Big Data and stop there is a mistake.
+
+It’s not about the data
+Big Data is not about the data [1], any more than philosophy is about words. Big Data is about the value that can be extracted from the data, or, the MEANING contained in the data.
+
+A single technology – rather it’s an entire technology ecosystem
+Big Data is a way of harvesting raw data from multiple, disparate data sources, storing the data for use by analytics programs, and using the raw data to derive value (meaning) from the data in a whole new ways. We’re talking data from traditional business applications like CRM and web applications, combined with data from a growing number of sensors (IoT), and social media like Facebook, Twitter, and LinkedIn.
+
+This means that no single technology can be called Big Data, which requires a tightly coordinated ecosystem of data acquisition, storage, and application technologies to make it work.
+
+A trend
+Big Data is the natural evolution of the way to cope with the vast quantities, types, and volume of data from today’s applications. The volume, velocity and variety of data coming into today’s enterprise means that these problems can only be solved by a solution that is equally organic, and capable of continued evolution.
+
+In other words, it’s the ways we are using software and creating the data that are driving Big Data.
+
+Unless we change the ways we use software (like apps), platforms (like social media), and core infrastructure technologies (like the internet), Big Data is here to stay. Case in point: Give up Snapchat? LinkedIn? Facebook? Twitter? Not gonna happen.
+
+
+The Solution
+In my opinion, Big Data is really a misnomer. As I mentioned earlier, Big Data is no more about the data than philosophy is about words. Big Data is about MEANING derived from the data. Maybe we should call it “Big Meaning” (granted, that’s not as catchy, but it makes more sense to me).
+
+So how does Big Meaning, um, I mean Big Data, solve the problems of data volume, velocity and variety?
+
+Volume
+Well, first, the data has to be stored somewhere, because without somewhere to store the data, it cannot be made available for analysis.
+
+Fortunately, storage is cheaper, more reliable, and – thanks to the cloud – more accessible than ever.
+
+Velocity
+We first need to deal with the speed at which the data comes in, and automated, intelligent systems that run lights-out, 24 x 7 x 365 help harvest patterns (meaning) in the data that would be impossible to detect through manual analysis. Advances in machine learning techniques help deal with the Velocity problem. Artificial neural networks, for example, can be trained to detect patterns, apply that knowledge to make predictions, and even adapt to the changing data on the fly.
+
+Variety
+Then there are the variety of directions (sources) from which the data come in. Patterns in the data are only good if we can look at what has happened before (historical data) and use them to predict something helpful or interesting about the future.
+
+However, as the variety of data sources continues to grow, so does the complexity of harvesting meaning from the data. Human beings simply cannot handle the load, which is where techniques like deep learning come into play. Deep learning networks can figure out how to make sense of the data’s various input formats and feed that into other networks to harvest meaning from the data.
+
+Conclusion
+The term Big Data really means “harvesting meaning from data” that is coming in faster, from more sources, and in more varied formats than ever before. We should probably call it Big Meaning. Because Big Data is really about the value in the data, rather than the data itself.
+
+Rather than being a single technology, Big Data is an ecosystem of coordinated techniques and technologies that derive business value from the mountains of data produced in today’s world.
+root@a662f10897e8:/# 
+root@a662f10897e8:/# history 50 > hadoop-cluster.txt
+root@a662f10897e8:/# exit
