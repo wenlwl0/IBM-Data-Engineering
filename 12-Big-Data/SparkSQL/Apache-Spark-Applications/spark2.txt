@@ -1,0 +1,6 @@
+    1  export JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
+    2  export SPARK_HOME=/home/project/spark-3.3.3-bin-hadoop3
+    3  cd $SPARK_HOME
+    4  ./sbin/start-worker.sh spark://theiadocker-wl2533:7077 --cores 1 --memory 1g
+    5  ./sbin/stop-worker.sh
+    6  history 50 > spark2.txt
