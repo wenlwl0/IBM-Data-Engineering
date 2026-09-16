@@ -11,3 +11,7 @@
 * Create tables using SQL scripts
 * Load data into tables directly from CSV files
 
+## String Patterns, Sorting and Grouping
+* Filter the output of a SELECT query by using string patterns or ranges.
+* Sort the result set in either ascending or descending order in accordance with a pre-determined column.
+* Group the outcomes of a query based on a selected parameter to further refine the response.
