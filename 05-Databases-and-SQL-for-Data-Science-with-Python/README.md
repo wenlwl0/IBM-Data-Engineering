@@ -22,3 +22,8 @@
 * String Functions
 * Date Functions
 
+## Sub-queries and Nested Selects
+* Write SQL queries that demonstrate the necessity of using sub-queries
+* Compose sub-queries in the where clause
+* Build column expressions (for example, sub-query in place of a column)
+* Write table expressions (for example, sub-query in place of a table)
