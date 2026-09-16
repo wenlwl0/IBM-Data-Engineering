@@ -27,3 +27,12 @@
 * Compose sub-queries in the where clause
 * Build column expressions (for example, sub-query in place of a column)
 * Write table expressions (for example, sub-query in place of a table)
+
+## Working with Multiple Tables
+* Write SQL queries that access more than one table
+* Compose queries that access multiple tables using a nested statement in the WHERE clause
+* Build queries with multiple tables in the FROM clause
+* Write Implicit Join queries with join criteria specified in the WHERE clause
+* Specify aliases for table names and qualify column names with table aliases
+* Accessing Multiple Tables with Sub-Queries
+* Accessing Multiple Tables with Implicit Joins
