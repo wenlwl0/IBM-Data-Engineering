@@ -1,0 +1,15 @@
+    1  kubectl get po
+
+    NAME                               READY   STATUS      RESTARTS   AGE
+    spark                              2/2     Running     0          4m44s
+    spark-pi-a661e1a0ac025cfd-driver   0/1     Completed   0          3m26s
+  
+    2  kubectl logs spark-pi-a661e1a0ac025cfd-driver |grep "Job 0 finished:"
+
+    26/09/16 20:58:50 INFO DAGScheduler: Job 0 finished: reduce at SparkPi.scala:38, took 12.941426 s
+
+    3  kubectl logs spark-pi-a661e1a0ac025cfd-driver |grep "Pi is roughly "
+
+    Pi is roughly 3.141939141939142
+    
+    4  history 50 > apachesparkkubernetes2.txt

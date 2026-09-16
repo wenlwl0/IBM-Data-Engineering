@@ -30,3 +30,7 @@
 * Install a Spark Master and Worker using Docker Compose
 * Create a Python script containing a Spark job
 * Submit the job to the cluster directly from python (Submit a job from the command line in the Kubernetes lab)
+
+## Apache Spark on Kubernetes
+* Create a Kubernetes Pod - a set of containers running inside Kubernetes - here, containing Apache Spark which we use to submit jobs against Kubernetes
+* Submit Apache Spark jobs to Kubernetes
