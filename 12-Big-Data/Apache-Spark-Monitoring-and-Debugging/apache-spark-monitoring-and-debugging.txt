@@ -1,0 +1,190 @@
+theia@theiadocker-wl2533:/home/project$ wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-BD0225EN-SkillsNetwork/labs/data/cars.csv
+--2026-09-17 18:40:31--  https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-BD0225EN-SkillsNetwork/labs/data/cars.csv
+Resolving cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud (cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud)... 169.63.118.104, 169.63.118.104
+Connecting to cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud (cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud)|169.63.118.104|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 21083 (21K) [text/csv]
+Saving to: 'cars.csv'
+
+cars.csv                      100%[===============================================>]  20.59K  --.-KB/s    in 0.001s  
+
+2026-09-17 18:40:31 (31.8 MB/s) - 'cars.csv' saved [21083/21083]
+
+theia@theiadocker-wl2533:/home/project$ for i in `docker ps | awk '{print $1}' | grep -v CONTAINER`; do docker kill $i; done
+theia@theiadocker-wl2533:/home/project$ docker rm spark-master spark-worker-1 spark-worker-2
+Error response from daemon: No such container: spark-master
+Error response from daemon: No such container: spark-worker-1
+Error response from daemon: No such container: spark-worker-2
+theia@theiadocker-wl2533:/home/project$ docker run \
+    --name spark-master \
+    -h spark-master \
+    -e ENABLE_INIT_DAEMON=false \
+    -p 4040:4040 \
+    -p 8080:8080 \
+    -v `pwd`:/home/root \
+    -d bde2020/spark-master:3.1.1-hadoop3.2
+Unable to find image 'bde2020/spark-master:3.1.1-hadoop3.2' locally
+3.1.1-hadoop3.2: Pulling from bde2020/spark-master
+396c31837116: Pull complete 
+0a2185b561bb: Pull complete 
+a4bf5c05668f: Pull complete 
+9ffb11a0df85: Pull complete 
+0436623b0fbf: Pull complete 
+2ba16369776d: Pull complete 
+Digest: sha256:3769ac0403b86d42e6158fdaf23a01759f87188e968408e0c77b4a6bcc26d3ff
+Status: Downloaded newer image for bde2020/spark-master:3.1.1-hadoop3.2
+1438e3fcef1e098451ac85807b2c83104e8598dc4dd7fd4af8b00a9957e35102
+theia@theiadocker-wl2533:/home/project$ docker run \
+    --name spark-worker-1 \
+    --link spark-master:spark-master \
+    -e ENABLE_INIT_DAEMON=false \
+    -p 8081:8081 \
+    -v `pwd`:/home/root \
+    -d bde2020/spark-worker:3.1.1-hadoop3.2
+Unable to find image 'bde2020/spark-worker:3.1.1-hadoop3.2' locally
+3.1.1-hadoop3.2: Pulling from bde2020/spark-worker
+396c31837116: Already exists 
+0a2185b561bb: Already exists 
+a4bf5c05668f: Already exists 
+9ffb11a0df85: Already exists 
+0436623b0fbf: Already exists 
+b75614286e6e: Pull complete 
+Digest: sha256:68ecd0ba8766bcdf32607e6ac04a330b799fd3d63749456d3fba6ab4d0d96d46
+Status: Downloaded newer image for bde2020/spark-worker:3.1.1-hadoop3.2
+a396ab4faa38b517f9d776643cf4048345675c19223ab0db2a4620948766b257
+theia@theiadocker-wl2533:/home/project$ docker exec \
+    -it `docker ps | grep spark-master | awk '{print $1}'` \
+    /spark/bin/pyspark \
+    --master spark://spark-master:7077
+Python 3.7.10 (default, Mar  2 2021, 09:06:08) 
+[GCC 8.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+26/09/17 22:43:28 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /__ / .__/\_,_/_/ /_/\_\   version 3.1.1
+      /_/
+
+Using Python version 3.7.10 (default, Mar  2 2021 09:06:08)
+Spark context Web UI available at http://spark-master:4040
+Spark context available as 'sc' (master = spark://spark-master:7077, app id = app-20260917224331-0000).
+SparkSession available as 'spark'.
+theia@theiadocker-wl2533:/home/project$ git clone https://github.com/wenlwl0/IBM-Data-Engineergit clone https://github.com/wenlwl0/IBM-Data-Engineering.git 
+Cloning into 'IBM-Data-Engineering'...
+remote: Enumerating objects: 427, done.
+remote: Counting objects: 100% (154/154), done.
+remote: Compressing objects: 100% (130/130), done.
+remote: Total 427 (delta 50), reused 123 (delta 20), pack-reused 273 (from 1)
+Receiving objects: 100% (427/427), 24.21 MiB | 22.64 MiB/s, done.
+Resolving deltas: 100% (137/137), done.
+theia@theiadocker-wl2533:/home/project$ wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-BD0225EN-SkillsNetwork/labs/data/cars.csv
+--2026-09-17 18:40:31--  https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-BD0225EN-SkillsNetwork/labs/data/cars.csv
+Resolving cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud (cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud)... 169.63.118.104, 169.63.118.104
+Connecting to cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud (cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud)|169.63.118.104|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 21083 (21K) [text/csv]
+Saving to: 'cars.csv'
+
+cars.csv                        0%[                                                ]       0  cars.csv                      100%[===============================================>]  20.59K  --.-KB/s    in 0.001s  
+
+2026-09-17 18:40:31 (31.8 MB/s) - 'cars.csv' saved [21083/21083]
+
+theia@theiadocker-wl2533:/home/project$ for i in `docker ps | awk '{print $1}' | grep -v CONTAINER`; do docker kill $i; done
+theia@theiadocker-wl2533:/home/project$ docker rm spark-master spark-worker-1 spark-worker-2
+Error response from daemon: No such container: spark-master
+Error response from daemon: No such container: spark-worker-1
+Error response from daemon: No such container: spark-worker-2
+theia@theiadocker-wl2533:/home/project$ docker run \
+    --name spark-master \
+    -h spark-master \
+    -e ENABLE_INIT_DAEMON=false \
+    -p 4040:4040 \
+    -p 8080:8080 \
+    -v `pwd`:/home/root \
+    -d bde2020/spark-master:3.1.1-hadoop3.2
+Unable to find image 'bde2020/spark-master:3.1.1-hadoop3.2' locally
+3.1.1-hadoop3.2: Pulling from bde2020/spark-master
+396c31837116: Pull complete 
+0a2185b561bb: Pull complete 
+a4bf5c05668f: Pull complete 
+9ffb11a0df85: Pull complete 
+0436623b0fbf: Pull complete 
+2ba16369776d: Pull complete 
+Digest: sha256:3769ac0403b86d42e6158fdaf23a01759f87188e968408e0c77b4a6bcc26d3ff
+Status: Downloaded newer image for bde2020/spark-master:3.1.1-hadoop3.2
+1438e3fcef1e098451ac85807b2c83104e8598dc4dd7fd4af8b00a9957e35102
+theia@theiadocker-wl2533:/home/project$ docker run \
+    --name spark-worker-1 \
+    --link spark-master:spark-master \
+    -e ENABLE_INIT_DAEMON=false \
+    -p 8081:8081 \
+    -v `pwd`:/home/root \
+    -d bde2020/spark-worker:3.1.1-hadoop3.2
+Unable to find image 'bde2020/spark-worker:3.1.1-hadoop3.2' locally
+3.1.1-hadoop3.2: Pulling from bde2020/spark-worker
+396c31837116: Already exists 
+0a2185b561bb: Already exists 
+a4bf5c05668f: Already exists 
+9ffb11a0df85: Already exists 
+0436623b0fbf: Already exists 
+b75614286e6e: Pull complete 
+Digest: sha256:68ecd0ba8766bcdf32607e6ac04a330b799fd3d63749456d3fba6ab4d0d96d46
+Status: Downloaded newer image for bde2020/spark-worker:3.1.1-hadoop3.2
+a396ab4faa38b517f9d776643cf4048345675c19223ab0db2a4620948766b257
+theia@theiadocker-wl2533:/home/project$ docker exec \
+    -it `docker ps | grep spark-master | awk '{print $1}'` \
+    /spark/bin/pyspark \
+    --master spark://spark-master:7077
+Python 3.7.10 (default, Mar  2 2021, 09:06:08) 
+[GCC 8.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+26/09/17 22:43:28 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /__ / .__/\_,_/_/ /_/\_\   version 3.1.1
+      /_/
+
+Using Python version 3.7.10 (default, Mar  2 2021 09:06:08)
+Spark context Web UI available at http://spark-master:4040
+Spark context available as 'sc' (master = spark://spark-master:7077, app id = app-20260917224331-0000).
+SparkSession available as 'spark'.
+>>> df = spark.read.csv("/home/root/cars.csv", header=True, inferSchema=True) \
+...     .repartition(32) \
+...     .cache()
+
+>>> df.show()                                                                   
++----+---------+------------+----------+------+------------+-----+------+--------------------+
+| mpg|cylinders|displacement|horsepower|weight|acceleration|model|origin|            car_name|
++----+---------+------------+----------+------+------------+-----+------+--------------------+
+|12.0|        8|       455.0|     225.0|4951.0|        11.0|   73|     1|buick electra 225...|
+|27.0|        4|        97.0|     88.00|2100.0|        16.5|   72|     3|toyota corolla 16...|
+|33.0|        4|       105.0|     74.00|2190.0|        14.2|   81|     2|    volkswagen jetta|
+|21.0|        6|       200.0|         ?|2875.0|        17.0|   74|     1|       ford maverick|
+|31.0|        4|       112.0|     85.00|2575.0|        16.2|   82|     1|pontiac j2000 se ...|
+|36.0|        4|       105.0|     74.00|1980.0|        15.3|   82|     2| volkswagen rabbit l|
+|25.5|        4|       140.0|     89.00|2755.0|        15.8|   77|     1| ford mustang ii 2+2|
+|38.0|        6|       262.0|     85.00|3015.0|        17.0|   82|     1|oldsmobile cutlas...|
+|13.0|        8|       318.0|     150.0|3940.0|        13.2|   76|     1|plymouth volare p...|
+|18.0|        6|       258.0|     110.0|2962.0|        13.5|   71|     1|amc hornet sporta...|
+|23.0|        4|        97.0|     54.00|2254.0|        23.5|   72|     2|   volkswagen type 3|
+|20.0|        4|       130.0|     102.0|3150.0|        15.7|   76|     2|           volvo 245|
+|19.4|        6|       232.0|     90.00|3210.0|        17.2|   78|     1|         amc concord|
+|18.1|        6|       258.0|     120.0|3410.0|        15.1|   78|     1|     amc concord d/l|
+|13.0|        8|       302.0|     130.0|3870.0|        15.0|   76|     1|           ford f108|
+|26.0|        4|       156.0|     92.00|2585.0|        14.5|   82|     1|chrysler lebaron ...|
+|23.0|        4|       115.0|     95.00|2694.0|        15.0|   75|     2|          audi 100ls|
+|25.0|        4|       140.0|     92.00|2572.0|        14.9|   76|     1|            capri ii|
+|20.0|        6|       232.0|     100.0|2914.0|        16.0|   75|     1|         amc gremlin|
+|27.2|        4|       119.0|     97.00|2300.0|        14.7|   78|     3|          datsun 510|
++----+---------+------------+----------+------+------------+-----+------+--------------------+
+only showing top 20 rows

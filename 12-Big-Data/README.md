@@ -34,3 +34,9 @@
 ## Apache Spark on Kubernetes
 * Create a Kubernetes Pod - a set of containers running inside Kubernetes - here, containing Apache Spark which we use to submit jobs against Kubernetes
 * Submit Apache Spark jobs to Kubernetes
+
+## Apache Spark Monitoring and Debugging
+* Start a Spark Standalone Cluster and connect with the PySpark shell.
+* Create a DataFrame and open the application web UI.
+* Debug a runtime error by locating the failed task in the web UI.
+* Run an SQL query to monitor, then scale up by adding another worker to the cluster.
